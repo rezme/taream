@@ -42,11 +42,12 @@ charset=utf-8">
 maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
-function onload(){
+function onLoad(){
 document.addEventListener("deviceready",onDeviceReady,false);
 }
 function onDeviceReady() {
 document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+document.addEventListener("menubutton", onMenuKeyDown, false);
 }
 function onVolumeDownKeyDown() {
       navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
@@ -65,9 +66,20 @@ function caracteristicas(){
                             'Plataforma: ' + device.platform + '<br />' + 
                             'Version: '  + device.version  + '<br />';
 }
+function onMenuKeyDown() {
+        navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
+        destinationType: Camera.DestinationType.FILE_URI }); 
+        function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+    }
 </script>
 </head>
-<body onload="onload();">
+<body onload="onLoad();">
 <h1>Herramientas</h1>
 <button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
