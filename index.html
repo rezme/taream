@@ -22,7 +22,7 @@
     text-align: center;
     background-color: #5ABFAD;
     font-family: helvetica;
-    width: 100px;
+    width: 150px;
     margin: 5% auto;
     display: block;
   }
@@ -62,9 +62,10 @@ function onMenuKeyDown() {
 function onSuccess(imageURI) {
     var image = document.getElementById('myImage');
     image.src = imageURI;
+    navigator.notification.alert("Se guardo exitosamente la foto",alertDismissed,"Aviso","Aceptar");
 }
 function onFail(message) {
-    alert('No se tomo foto ' + message);
+    navigator.notification.alert("No se guardo ninguna foto",alertDismissed,"Aviso","Aceptar");
 }
     }
 </script>
