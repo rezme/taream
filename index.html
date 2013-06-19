@@ -44,10 +44,8 @@ maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8">
 
 document.addEventListener("deviceready",onDeviceReady,false);
-teclaabajo(){
-document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
-}
 function onDeviceReady() {
+document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 }
 function caracteristicas(){
   var element = document.getElementById('propiedades');
@@ -70,7 +68,7 @@ function onFail(message) {
 }
 </script>
 </head>
-<body onload"teclaabajo();">
+<body>
 <h1>Herramientas</h1>
 <button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
