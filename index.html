@@ -12,12 +12,9 @@ document.addEventListener("deviceready",onDeviceReady,
 false);
 }
 function onDeviceReady() {
-var element = document.getElementById('propiedades');
-
+var element = document.getElementById('deviceProperties');
         element.innerHTML = 'Nombre del dispositivo: '  + device.name     + '<br />' + 
                             'Versión Phonegap: '       + device.phonegap + '<br />';
-function alertDismissed() {   // do something
-}
 </script>
 </head>
 <body onload="onBodyLoad()">
@@ -39,6 +36,6 @@ function alertDismissed() {   // do something
   }
 </style>
 <h1>Propiedades del Dispositivo</h1>
-<p id="propiedades">Cargando...</p>
+<p id="deviceProperties">Cargando...</p>
 </body>
 </html>
