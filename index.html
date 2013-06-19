@@ -28,13 +28,17 @@ maximum-scale=1.0, user-scalable=no;" />
 document.addEventListener("deviceready",onDeviceReady,false);
 
 function onDeviceReady() {
-var element = document.getElementById('propiedades');
-        element.innerHTML = 'Nombre del dispositivo: '  + device.model;
+}
+function caracteristicas(){
+  var element = document.getElementById('propiedades');
+        element.innerHTML = 'Nombre del dispositivo: '  + device.model +
+                            'Platforma: ' + device.platform + '<br />' +
+                            'Version: '  + device.version  + '<br />';
 }
 </script>
 </head>
 <body>
-<h1>Propiedades del Dispositivo</h1>
-<p id="propiedades">Informacion: </p>
+<h1>Herramientas</h1>
+<button onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 </body>
 </html>
