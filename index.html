@@ -29,10 +29,11 @@ document.addEventListener("deviceready",onDeviceReady,false);
 function onDeviceReady() {
 var element = document.getElementById('deviceProperties');
         element.innerHTML = 'Nombre del dispositivo: '  + device.model;
+}
 </script>
 </head>
 <body>
 <h1>Propiedades del Dispositivo</h1>
-<p id="deviceProperties">Cargando...</p>
+<button onclick="capturePhoto();">Mostrar</button>
 </body>
 </html>
