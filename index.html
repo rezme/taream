@@ -19,20 +19,18 @@
   }
   .buttonC{
     border: solid 2px #038C7E;
-    text-align: left;
+    text-align: center;
     background-color: #5ABFAD;
     font-family: helvetica;
-  }
-  .buttonO{
-    border: solid 2px #038C7E;
-    text-align: left;
-    background-color: #5ABFAD;
-    font-family: helvetica;
+    width: 100px;
+    margin: 5% auto;
+    display: block;
   }
   .Otro{
     font-family: helvetica;
     Background-color: gray;
     color: white;
+    font-style: italic;
   }
 </style>
 <head>
@@ -75,7 +73,6 @@ function onFail(message) {
 <h1>Herramientas</h1>
 <button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
-<p class="Otro">Para abrir la camara presiona la tecla de volumen(ABAJO)</p>
-<button class="buttonO" onclick="onVolumeDownKeyDown();">Camara</button>
+<p class="Otro">Para abrir la cámara presiona la tecla menú/opciones</p>
 </body>
 </html>
