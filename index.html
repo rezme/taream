@@ -24,16 +24,14 @@ charset=utf-8">
 maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
-function onBodyLoad() {
-document.addEventListener("deviceready",onDeviceReady,
-false);
+document.addEventListener("deviceready",onDeviceReady,false);
 }
 function onDeviceReady() {
 var element = document.getElementById('deviceProperties');
         element.innerHTML = 'Nombre del dispositivo: '  + device.name;
 </script>
 </head>
-<body onload="onBodyLoad()">
+<body>
 <h1>Propiedades del Dispositivo</h1>
 <p id="deviceProperties">Cargando...</p>
 </body>
