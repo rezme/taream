@@ -47,16 +47,8 @@ document.addEventListener("deviceready",onDeviceReady,false);
 document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 
 function onDeviceReady() {
-}
-function caracteristicas(){
-  var element = document.getElementById('propiedades');
-        element.innerHTML = 'Nombre del dispositivo: '  + device.model + '<br />' +
-                            'Plataforma: ' + device.platform + '<br />' + 
-                            'Version: '  + device.version  + '<br />';
-}
-function onVolumeDownKeyDown() {
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
-    destinationType: Camera.DestinationType.FILE_URI }); 
+      navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
+      destinationType: Camera.DestinationType.FILE_URI }); 
 
 function onSuccess(imageURI) {
     var image = document.getElementById('myImage');
@@ -66,6 +58,14 @@ function onSuccess(imageURI) {
 function onFail(message) {
     alert('Failed because: ' + message);
 }
+}
+function caracteristicas(){
+  var element = document.getElementById('propiedades');
+        element.innerHTML = 'Nombre del dispositivo: '  + device.model + '<br />' +
+                            'Plataforma: ' + device.platform + '<br />' + 
+                            'Version: '  + device.version  + '<br />';
+}
+function onVolumeDownKeyDown() {
 }
 </script>
 </head>
