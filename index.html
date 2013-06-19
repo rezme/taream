@@ -29,6 +29,11 @@
     background-color: #5ABFAD;
     font-family: helvetica;
   }
+  .Otro{
+    font-family: helvetica;
+    Background-color: gray;
+    color: white;
+  }
 </style>
 <head>
 <meta http-equiv="Content-type" content="text/html;
@@ -39,6 +44,7 @@ maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8">
 
 document.addEventListener("deviceready",onDeviceReady,false);
+document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 
 function onDeviceReady() {
 }
@@ -48,12 +54,15 @@ function caracteristicas(){
                             'Plataforma: ' + device.platform + '<br />' + 
                             'Version: '  + device.version  + '<br />';
 }
+function onVolumeDownKeyDown() {
+    navigator.splashscreen.show();
+}
 </script>
 </head>
 <body>
 <h1>Herramientas</h1>
 <button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
-<button class="buttonO" onclick="caracteristicas();">Otro</button>
+<p class="Otro">Para mostrar presiona la tecla de volumen(ABAJO)</p>
 </body>
 </html>
