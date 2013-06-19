@@ -18,15 +18,17 @@
     color: white;
   }
   .buttonC{
+    border: solid 2px #5ABFAD;
     float: left;
     text-align: left;
-    background-color: blue;
+    background-color: #038C7E;
     font-family: helvetica;
   }
   .buttonO{
-    float: right;
+    border: solid 2px #5ABFAD;
+    float: left;
     text-align: left;
-    background-color: blue;
+    background-color: #038C7E;
     font-family: helvetica;
   }
 </style>
@@ -52,8 +54,8 @@ function caracteristicas(){
 </head>
 <body>
 <h1>Herramientas</h1>
-<button id="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
+<button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
-<button id="buttonO" onclick="caracteristicas();">Otro</button>
+<button class="buttonO" onclick="caracteristicas();">Otro</button>
 </body>
 </html>
