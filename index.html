@@ -9,12 +9,25 @@
     margin: auto;
     background-color: Black;
     text-align: center;
+    padding: 5px 0 5px;
   }
   body{
     background-color: #CCC;
   }
   p{
     color: white;
+  }
+  .buttonC{
+    float: left;
+    text-align: left;
+    background-color: blue;
+    font-family: helvetica;
+  }
+  .buttonO{
+    float: right;
+    text-align: left;
+    background-color: blue;
+    font-family: helvetica;
   }
 </style>
 <head>
@@ -32,14 +45,15 @@ function onDeviceReady() {
 function caracteristicas(){
   var element = document.getElementById('propiedades');
         element.innerHTML = 'Nombre del dispositivo: '  + device.model + '<br />' +
-                            'Device Platform: ' + device.platform + '<br />' + 
+                            'Plataforma: ' + device.platform + '<br />' + 
                             'Version: '  + device.version  + '<br />';
 }
 </script>
 </head>
 <body>
 <h1>Herramientas</h1>
-<button onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
+<button id="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
+<button id="buttonO" onclick="caracteristicas();">Otro</button>
 </body>
 </html>
