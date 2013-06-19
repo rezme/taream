@@ -31,14 +31,13 @@ function onDeviceReady() {
 }
 function caracteristicas(){
   var element = document.getElementById('propiedades');
-        element.innerHTML = 'Nombre del dispositivo: '  + device.model +
-                            'Platforma: ' + device.platform + '<br />' +
+        element.innerHTML = 'Nombre del dispositivo: '  + device.model + '<br />'
                             'Version: '  + device.version  + '<br />';
 }
 </script>
 </head>
 <body>
 <h1>Herramientas</h1>
-<button onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
+<button onclick="propiedades">Mostrar <br /> Caracteristicas</button>
 </body>
 </html>
