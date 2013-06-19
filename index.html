@@ -48,7 +48,6 @@ function alertDismissed() {
 function onDeviceReady() {
 document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 document.addEventListener("menubutton", onMenuKeyDown, false);
-navigator.notification.alert("No se guardo ninguna foto",alertDismissed,"Aviso","Aceptar");
 }
 function onVolumeDownKeyDown() {
   navigator.notification.alert("Wawawa",alertDismissed,"Lalala","fin");
@@ -68,7 +67,7 @@ function onSuccess(imageURI) {
     navigator.notification.alert("Se guardo exitosamente la foto",alertDismissed,"Aviso","Aceptar");
 }
 function onFail() {
-    alert("No se guardo ninguna foto",alertDismissed,"Aviso","Aceptar");
+    navigator.notification.alert("No se guardo ninguna foto",alertDismissed,"Aviso","Aceptar");
 }
     }
 </script>
