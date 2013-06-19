@@ -44,9 +44,18 @@ maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8">
 
 document.addEventListener("deviceready",onDeviceReady,false);
+teclaabajo(){
 document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
-
+}
 function onDeviceReady() {
+}
+function caracteristicas(){
+  var element = document.getElementById('propiedades');
+        element.innerHTML = 'Nombre del dispositivo: '  + device.model + '<br />' +
+                            'Plataforma: ' + device.platform + '<br />' + 
+                            'Version: '  + device.version  + '<br />';
+}
+function onVolumeDownKeyDown() {
       navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
       destinationType: Camera.DestinationType.FILE_URI }); 
 
@@ -59,17 +68,9 @@ function onFail(message) {
     alert('Failed because: ' + message);
 }
 }
-function caracteristicas(){
-  var element = document.getElementById('propiedades');
-        element.innerHTML = 'Nombre del dispositivo: '  + device.model + '<br />' +
-                            'Plataforma: ' + device.platform + '<br />' + 
-                            'Version: '  + device.version  + '<br />';
-}
-function onVolumeDownKeyDown() {
-}
 </script>
 </head>
-<body>
+<body onload"teclaabajo();">
 <h1>Herramientas</h1>
 <button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
