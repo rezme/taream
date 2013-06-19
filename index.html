@@ -12,15 +12,32 @@ document.addEventListener("deviceready",onDeviceReady,
 false);
 }
 function onDeviceReady() {
-var name = device.name;
-var name = device.phonegap;
-}
+var element = document.getElementById('propiedades');
+
+        element.innerHTML = 'Nombre del dispositivo: '  + device.name     + '<br />' + 
+                            'Versión Phonegap: '       + device.phonegap + '<br />';
 function alertDismissed() {   // do something
 }
 </script>
 </head>
 <body onload="onBodyLoad()">
-<h1>Phonegap</h1>
-<p>Ejemplo.</p>
+<style>
+  h1{
+    width: 100%;
+    font: helvetica;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    background-color: Black;
+  }
+  body{
+    background-color: #CCC;
+  }
+  p{
+    color: white;
+  }
+</style>
+<h1>Propiedades del Dispositivo</h1>
+<p id="propiedades"></p>
 </body>
 </html>
