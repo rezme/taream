@@ -47,7 +47,6 @@ document.addEventListener("deviceready",onDeviceReady,false);
 document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 
 function onDeviceReady() {
-    navigator.splashscreen.show();
 }
 function caracteristicas(){
   var element = document.getElementById('propiedades');
@@ -56,7 +55,16 @@ function caracteristicas(){
                             'Version: '  + device.version  + '<br />';
 }
 function onVolumeDownKeyDown() {
-    navigator.splashscreen.hide();
+    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+}
+function onSuccess(acceleration) {
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n' +
+              'Timestamp: '      + acceleration.timestamp + '\n');
+}
+function onError() {
+        alert('onError!');
 }
 </script>
 </head>
@@ -64,6 +72,6 @@ function onVolumeDownKeyDown() {
 <h1>Herramientas</h1>
 <button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
-<p class="Otro">Para mostrar presiona la tecla de volumen(ABAJO)</p>
+<p id="onSuccess();" class="Otro">Para mostrar presiona la tecla de volumen(ABAJO)</p>
 </body>
 </html>
