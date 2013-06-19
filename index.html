@@ -43,10 +43,12 @@ maximum-scale=1.0, user-scalable=no;" />
 function onLoad(){
 document.addEventListener("deviceready",onDeviceReady,false);
 }
+function alertDismissed() {   
+  }
 function onDeviceReady() {
 document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 document.addEventListener("menubutton", onMenuKeyDown, false);
-alert("No se guardo ninguna foto",alertDismissed,"Aviso","Aceptar");
+navigator.notification.alert("No se guardo ninguna foto",alertDismissed,"Aviso","Aceptar");
 }
 function onVolumeDownKeyDown() {
   navigator.notification.alert("Wawawa",alertDismissed,"Lalala","fin");
