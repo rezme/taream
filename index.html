@@ -55,20 +55,21 @@ function caracteristicas(){
                             'Version: '  + device.version  + '<br />';
 }
 function onVolumeDownKeyDown() {
-    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
+    destinationType: Camera.DestinationType.FILE_URI }); 
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
 }
-function onSuccess(acceleration) {
-        alert('Acceleration X: ' + acceleration.x + '\n' +
-              'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n' +
-              'Timestamp: '      + acceleration.timestamp + '\n');
+
+function onFail(message) {
+    alert('Failed because: ' + message);
 }
-function onError() {
-        alert('onError!');
 }
 </script>
 </head>
-<body onload="onSuccess();">
+<body>
 <h1>Herramientas</h1>
 <button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
