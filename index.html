@@ -24,8 +24,9 @@ charset=utf-8">
 maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
+
 document.addEventListener("deviceready",onDeviceReady,false);
-}
+
 function onDeviceReady() {
 var element = document.getElementById('propiedades');
         element.innerHTML = 'Nombre del dispositivo: '  + device.model;
