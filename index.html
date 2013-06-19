@@ -50,15 +50,7 @@ document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 document.addEventListener("menubutton", onMenuKeyDown, false);
 }
 function onVolumeDownKeyDown() {
-      navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
-      destinationType: Camera.DestinationType.FILE_URI }); 
-function onSuccess(imageURI) {
-    var image = document.getElementById('myImage');
-    image.src = imageURI;
-}
-function onFail(message) {
-    alert('Failed because: ' + message);
-}
+  navigator.notification.alert("Wawawa",alertDismissed,"Lalala","fin");
 }
 function caracteristicas(){
   var element = document.getElementById('propiedades');
