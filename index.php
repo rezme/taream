@@ -25,6 +25,7 @@
     width: 150px;
     margin: 5% auto;
     display: block;
+    color: white;
   }
   .Otro{
     font-family: helvetica;
