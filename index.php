@@ -87,6 +87,7 @@ function onFail() {
 for($i=0;$i<10;$i++){
   echo $i;
 	}
+?>
 <p class="Otro">Para abrir la cámara presiona la tecla menú/opciones</p>
 </body>
 </html>
