@@ -83,6 +83,10 @@ function onFail() {
 <h1>Herramientas</h1>
 <button class="buttonC" onclick="caracteristicas();">Mostrar <br /> Caracteristicas</button>
 <p id="propiedades"></p>
+<?php
+for($i=0;$i<10;$i++){
+  echo $i;
+	}
 <p class="Otro">Para abrir la cámara presiona la tecla menú/opciones</p>
 </body>
 </html>
