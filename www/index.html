@@ -48,16 +48,8 @@ document.addEventListener("deviceready",onDeviceReady,false);
 function alertDismissed() {   
   }
 function onDeviceReady() {
-document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
-document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
 document.addEventListener("menubutton", onMenuKeyDown, false);
 document.addEventListener("resume", onResume, false);
-}
-function onVolumeDownKeyDown() {
-  navigator.notification.alert("Wawawa",alertDismissed,"Lalala","fin");
-}
-function onVolumeUpKeyDown(){
-  navigator.notification.alert("Wawawa",alertDismissed,"Lalala","fin");
 }
 function onResume(){
   navigator.notification.alert("Has regresado a la aplicacion",alertDismissed,"","Aceptar");
@@ -92,6 +84,5 @@ for($i=0;$i<10;$i++){
 	}
 ?>
 <p class="Otro">Para abrir la cámara presiona la tecla menú/opciones</p>
-<p>omgfmgdfgs</p>
 </body>
 </html>
