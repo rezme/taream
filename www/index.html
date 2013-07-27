@@ -74,7 +74,6 @@ function onFail() {
     }
 function geolocalizacion(){
 	navigator.geolocation.getCurrentPosition(onSuccess, onError);
-}
 function onSuccess(position) {
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
@@ -90,6 +89,7 @@ function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
+}
 </script>
 </head>
 <body onload="onLoad();">
