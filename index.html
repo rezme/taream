@@ -47,14 +47,14 @@ function alertDismissed() {
   }
 function onDeviceReady() {
 document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
-document.addEventListener("volumeupbutton", upbutton, false);
+document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
 document.addEventListener("menubutton", onMenuKeyDown, false);
 document.addEventListener("resume", onResume, false);
 }
 function onVolumeDownKeyDown() {
   navigator.notification.alert("Wawawa",alertDismissed,"Lalala","fin");
 }
-function upbutton(){
+function onVolumeUpKeyDown(){
   navigator.notification.alert("Wawawa",alertDismissed,"Lalala","fin");
 }
 function onResume(){
