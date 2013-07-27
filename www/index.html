@@ -61,13 +61,14 @@ maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8">
 function onLoad(){
 document.addEventListener("deviceready",onDeviceReady,false);
-google.maps.event.addDomListener(window, 'load', setup); 
 }
 function alertDismissed() {   
   }
 function onDeviceReady() {
 document.addEventListener("menubutton", onMenuKeyDown, false);
 document.addEventListener("resume", onResume, false);
+var map = new GoogleMap();
+    map.initialize();
 }
 function onResume(){
   navigator.notification.alert("Has regresado a la aplicacion",alertDismissed,"","Aceptar");
@@ -119,7 +120,7 @@ function onError(error) {
         <div data-role="header" data-theme="c">
             <h1>Maps</h1>
         </div>
-        <div id="map-canvas">
+        <div id="map_canvas">
             <!-- map loads here... -->
         </div>
     </div>
