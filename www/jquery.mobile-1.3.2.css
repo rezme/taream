@@ -13,6 +13,7 @@
 /* Swatches */
 /* A
 -----------------------------------------------------------------------------------------------------------*/
+#map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
 .ui-bar-a {
   border: 1px solid 		#333 /*{a-bar-border}*/;
 	background: 			#111 /*{a-bar-background-color}*/;
