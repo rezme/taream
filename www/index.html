@@ -65,6 +65,8 @@ document.addEventListener("deviceready",onDeviceReady,false);
 function alertDismissed() {   
   }
 function onDeviceReady() {
+alert('alerta');
+console.log('alerta');
 document.addEventListener("menubutton", onMenuKeyDown, false);
 document.addEventListener("resume", onResume, false);
 var map = new GoogleMap();
@@ -80,8 +82,7 @@ function caracteristicas(){
                             'Version: '  + device.version  + '<br />';
 }
 function onMenuKeyDown() {
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
-    destinationType: Camera.DestinationType.FILE_URI }); 
+    alert('omgomgomg');
 function onSuccess(imageURI) {
     var image = document.getElementById('myImage');
     image.src = imageURI;
